@@ -285,6 +285,14 @@ font-family: "Manrope", Sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  -webkit-border-radius: var(--radius-sm);
+  -moz-border-radius: var(--radius-sm);
+  -ms-border-radius: var(--radius-sm);
+  -o-border-radius: var(--radius-sm);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 .btn-watch:hover {
@@ -300,6 +308,14 @@ font-family: "Manrope", Sans-serif;
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
   transition: var(--transition);
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 .btn-explore:hover {
@@ -323,11 +339,23 @@ font-family: "Manrope", Sans-serif;
   display: flex;
   align-items: flex-end;
   color: var(--bg-light);
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
 }
 
 .feature-card::before {
@@ -626,7 +654,10 @@ background-color: #fff4b3;
 }
 .therapy-card p{
   font-weight: 500;
-
+display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .card-contant{
   padding: 20px;
@@ -708,12 +739,12 @@ background-color: #fff4b3;
 .highlight-heading{
 position: absolute;
 top: 10px;
-right: 1%;
+right:-1%;
 font-style: italic;
 }
 
 .image-wrapper .section-title{
-font-size: 70px;
+font-size: 65px;
 
 font-weight: 900;
 
@@ -786,11 +817,13 @@ background-color: #0b0b0b !important;
   overflow:hidden ;
 }
 .portfolio-card h5{
-margin-top: 15px;
+margin: 15px 0;
 font-weight: 600;
 font-size: 16px;
 
+
 }
+
 
 
         .card-image {
@@ -1436,3 +1469,95 @@ font-size: 16px;
             transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
+
+
+
+        /*  */
+        
+
+
+        /* MEGA DROPDOWN */
+.mega-dropdown {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  left: -300px;
+  top: 100%;
+  width: 800px;
+  background: var(--secondary-color);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  z-index: 999;
+}
+
+/* Show on Hover */
+.mega-dropdown:hover .mega-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mega Item */
+.mega-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  cursor: pointer;
+  background: rgba(255,255,255,0.04);
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+}
+
+.mega-item:hover {
+  background: var(--accent-color);
+}
+
+.mega-item:hover .mega-desc{
+  color: white;
+}
+
+.mega-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bg-light);
+  margin-bottom: 4px;
+}
+
+.mega-desc {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Icon */
+.mega-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-light);
+  font-size: 20px;
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+}
+
+/* Navbar link fix */
+.navbar .nav-link {
+  color: var(--bg-light) !important;
+}

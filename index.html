@@ -10,6 +10,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -30,7 +32,82 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown">
+                                Services
+                            </a>
+
+                            <!-- Mega Menu -->
+                            <div class="mega-menu">
+                                <div class="row g-4">
+
+                                    <div class="col-md-6">
+                                        <div class="mega-item">
+                                            <div class="mega-icon"><i class="fas fa-vr-cardboard"></i></div>
+                                            <div>
+                                                <h6 class="mega-title">360° Virtual Shoots</h6>
+                                                <p class="mega-desc">Immersive virtual tours that highlight your space
+                                                    creatively.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mega-item">
+                                            <div class="mega-icon"><i class="fas fa-camera"></i></div>
+                                            <div>
+                                                <h6 class="mega-title">Photography & Videography</h6>
+                                                <p class="mega-desc">Professional shoots for brands, products &
+                                                    interiors.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mega-item">
+                                            <div class="mega-icon"><i class="fas fa-helicopter"></i></div>
+                                            <div>
+                                                <h6 class="mega-title">Drone Shoot Services</h6>
+                                                <p class="mega-desc">Aerial visuals with cinematic precision.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mega-item">
+                                            <div class="mega-icon"><i class="fas fa-box"></i></div>
+                                            <div>
+                                                <h6 class="mega-title">Product Photography</h6>
+                                                <p class="mega-desc">High-detail product visuals for e-commerce &
+                                                    brands.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mega-item">
+                                            <div class="mega-icon"><i class="fas fa-calendar"></i></div>
+                                            <div>
+                                                <h6 class="mega-title">Event & Exhibition Coverage</h6>
+                                                <p class="mega-desc">Capturing events with storytelling style.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mega-item">
+                                            <div class="mega-icon"><i class="fas fa-podcast"></i></div>
+                                            <div>
+                                                <h6 class="mega-title">UGC & Podcast Production</h6>
+                                                <p class="mega-desc">Content & podcast production for creators and
+                                                    brands.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
                     </ul>
@@ -42,7 +119,7 @@
                         <i class="fas fa-phone"></i>
                         +1 800 642 73 98
                     </span>
-                    <button class="btn btn-explore nav-btn">Track a shipment</button>
+                    <a href="contact.html" class="btn btn-explore nav-btn">Contact us</a>
                 </div>
             </div>
         </div>
@@ -60,14 +137,15 @@
                 <source src="img/home3-slide1.mp4" type="video/mp4">
             </video>
             <div class="hero-content ">
-                <h1>PROPER LOGISTIC IS SUCCESS FOR YOUR COMPANY</h1>
-                <p>Maximizing ourselves from "Integrated Logistics" quality upon our logistics solutions. Logistics
-                    specialists deliver value-added services.</p>
+                <h1>Professional Photography & 360° Virtual Tours That Elevate Your Brand</h1>
+                <p>From factories to real estate, schools to corporate spaces — we create immersive 360° tours, high-end
+                    videos, drone visuals, product shoots, and complete content solutions that help your business stand
+                    out.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-watch">
-                        <i class="fas fa-play"></i> Watch video
-                    </button>
-                    <button class="btn btn-explore">Explore more</button>
+                    <a href="/contact.html" class="btn btn-watch">
+                        <i class="fas fa-phone"></i> Contact us
+                    </a>
+                    <a href="services.html" class="btn btn-explore">Explore Services </a>
                 </div>
             </div>
         </div>
@@ -81,25 +159,23 @@
             <div class="row align-items-center">
                 <!-- Text Content -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="text-uppercase fw-semibold text-accent small">Award Winning</span>
-                    <h2 class="fw-bold mb-3">Interior Design</h2>
+                    <span class="text-uppercase fw-semibold text-accent small">About us</span>
+                    <h2 class="fw-bold mb-3">Creating Powerful Visual Experiences for Every Space</h2>
                     <p class="text-secondary mb-4">
-                        Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-                        right at the coast of the Semantics, a large language ocean.
+                        At 360shoots, we capture your spaces with high-end photography, immersive 360° virtual tours,
+                        drone cinematography, product shoots, event coverage, and complete video production.
+                        Our focus is simple — deliver visuals that create impact, build trust, and help your brand stand
+                        out.
+
                     </p>
                     <p class="text-secondary mb-4">
-                        Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia, there live the blind texts.
+                        With years of expertise and a client-first approach, we ensure every frame tells a compelling
+                        story and represents your business at its absolute best.
                     </p>
 
-                    <div class="d-flex align-items-center gap-3">
-                        <div>
-                            <h6 class="fw-semibold mb-0">Mark Magazine, CEO</h6>
-                        </div>
-                    </div>
 
-                    <button class="btn mt-4 btn-explore">Read More</button>
+
+                    <a href="about.html" class="btn mt-4 btn-explore">Read More</a>
                 </div>
 
                 <!-- Image + Quote -->
@@ -109,13 +185,13 @@
                             class="img-fluid rounded-3 shadow" alt="Interior Design" />
                     </div>
 
-                    <div class="quote-box shadow-sm p-3 rounded">
+                    <!-- <div class="quote-box shadow-sm p-3 rounded">
                         <p class="mb-1 fst-italic text-secondary">
                             “Far far away, behind the word mountains, far from the countries Vokalia and
                             Consonantia, there live the blind texts.”
                         </p>
                         <span class="small fw-bold text-primary-color">Mark M.</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -126,106 +202,212 @@
 
             <div class="row  mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h1 class="hero-title mb-3">Your Path to Wellness</h1>
+                    <h2 class="hero-title mb-3">Your Space, Captured Better Than Ever</h2>
                     <p class="hero-subtitle mb-4">Explore your inner world and gain insights</p>
-                    <button class="btn btn-dark btn-lg rounded-pill">Book Appointment</button>
+                    <a href="contact.html" class="btn btn-dark btn-lg rounded-pill">Book Free Consultation Call</a>
                 </div>
                 <div class="col-lg-6">
-                    <p class="text-muted small">We believe in deep human connection as a means of therapy. Our
-                        compassionate team of experienced therapists is here to guide you on your journey toward
-                        healing, growth, and self-discovery.</p>
+                    <p class="text-muted small">Showcase your business with immersive 360° tours, high-end photography,
+                        drone shoots, and complete video production solutions.
+                    </p>
                 </div>
             </div>
 
 
             <div class="row g-4">
-                <!-- Couples Therapy Card -->
+
+                <!-- Card 1 — 360° Virtual Tours -->
                 <div class="col-lg-3 col-md-6">
                     <div class="therapy-card card-teal">
                         <div class="card-contant">
-
                             <div class="card-header">
-
-                                <span class="badge-label">Couple</span>
+                                <span class="badge-label">Virtual Tour</span>
                             </div>
-                            <h3 class="card-title">Couples <br> Therapy</h3>
-                            <p class="card-description">Strengthen your relationship with professional guidance</p>
+                            <h3 class="card-title">360° <br> Virtual Shoot</h3>
+                            <p class="card-description">
+                                Immersive, interactive 360° walkthroughs for factories, campuses, gyms, real estate &
+                                interiors.
+                            </p>
                         </div>
                         <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop"
-                                alt="Couples Therapy">
+                                alt="">
                         </div>
                         <a href="#" class="read-more">
-                            Read More
+                            Explore
                             <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
                         </a>
                     </div>
                 </div>
 
-                <!-- Anger Management Card -->
+                <!-- Card 2 — Photography & Videography -->
                 <div class="col-lg-3 col-md-6">
                     <div class="therapy-card card-beige">
-
                         <div class="card-contant">
-
                             <div class="card-header">
-                                <span class="badge-label">Person</span>
+                                <span class="badge-label">Visuals</span>
                             </div>
-                            <h3 class="card-title">Anger <br> Management</h3>
-                            <p class="card-description">Improve communication and emotional control</p>
+                            <h3 class="card-title">Professional <br> Photo & Video</h3>
+                            <p class="card-description">
+                                High-end photography and cinematic videos tailored for brands, interiors, products, and
+                                corporate needs.
+                            </p>
                         </div>
                         <div class="card-image">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
-                                alt="Anger Management">
+                                alt="">
                         </div>
                         <a href="#" class="read-more">
-                            Read More
+                            Explore
                             <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
                         </a>
                     </div>
                 </div>
-                <!-- Teenage Sessions Card -->
+
+                <!-- Card 3 — Drone Cinematography -->
                 <div class="col-lg-3 col-md-6">
                     <div class="therapy-card card-pink">
                         <div class="card-contant">
                             <div class="card-header">
-                                <span class="badge-label">Teens</span>
+                                <span class="badge-label">Aerial</span>
                             </div>
-                            <h3 class="card-title">Teenage <br> Sessions</h3>
-                            <p class="card-description">Support and guidance for teens navigating life</p>
+                            <h3 class="card-title">Drone <br> Shoots</h3>
+                            <p class="card-description">
+                                Stunning aerial visuals that showcase your property, events, or operations from a whole
+                                new perspective.
+                            </p>
                         </div>
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop"
-                                alt="Teenage Sessions">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&h=300&fit=crop"
+                                alt="">
                         </div>
                         <a href="#" class="read-more">
-                            Read More
+                            Explore
                             <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
                         </a>
                     </div>
                 </div>
 
-                <!-- Addiction Therapy Card -->
+                <!-- Card 4 — Corporate Films -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="therapy-card ">
+                    <div class="therapy-card">
                         <div class="card-contant">
                             <div class="card-header">
-                                <span class="badge-label">Person</span>
+                                <span class="badge-label">Corporate</span>
                             </div>
-                            <h3 class="card-title">Addiction <br> Therapy</h3>
-                            <p class="card-description">Professional support for recovery and wellness</p>
+                            <h3 class="card-title">Corporate & <br> Brand Videos</h3>
+                            <p class="card-description">
+                                Powerful storytelling videos that present your brand, processes, and people with clarity
+                                and impact.
+                            </p>
                         </div>
                         <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop"
-                                alt="Addiction Therapy">
+                            <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?w=400&h=300&fit=crop"
+                                alt="">
                         </div>
                         <a href="#" class="read-more">
-                            Read More
+                            Explore
                             <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
                         </a>
                     </div>
                 </div>
+
+                <!-- Card 5 — Product Shoots -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="therapy-card card-teal">
+                        <div class="card-contant">
+                            <div class="card-header">
+                                <span class="badge-label">Product</span>
+                            </div>
+                            <h3 class="card-title">Product Photography</h3>
+                            <p class="card-description">
+                                Clean, detailed product visuals perfect for catalogues, e-commerce, branding &
+                                marketing.
+                            </p>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=300&fit=crop"
+                                alt="">
+                        </div>
+                        <a href="#" class="read-more">
+                            Explore
+                            <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6 — Event & Exhibition Coverage -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="therapy-card card-beige">
+                        <div class="card-contant">
+                            <div class="card-header">
+                                <span class="badge-label">Events</span>
+                            </div>
+                            <h3 class="card-title">Events & Exhibitions</h3>
+                            <p class="card-description">
+                                Complete event coverage including exhibitions, trade shows, corporate functions &
+                                launches.
+                            </p>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/asset-11.png" alt="">
+                        </div>
+                        <a href="#" class="read-more">
+                            Explore
+                            <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7 — Podcasts & UGC Production -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="therapy-card card-pink">
+                        <div class="card-contant">
+                            <div class="card-header">
+                                <span class="badge-label">Content</span>
+                            </div>
+                            <h3 class="card-title">Podcasts & UGC Content</h3>
+                            <p class="card-description">
+                                Engaging story-driven podcast setups and authentic UGC content for brand communication.
+                            </p>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=300&fit=crop"
+                                alt="">
+                        </div>
+                        <a href="#" class="read-more">
+                            Explore
+                            <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8 — Real Estate & Interior Shoots -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="therapy-card">
+                        <div class="card-contant">
+                            <div class="card-header">
+                                <span class="badge-label">Spaces</span>
+                            </div>
+                            <h3 class="card-title">Real Estate & Interiors</h3>
+                            <p class="card-description">
+                                Premium interior photography & walkthrough videos that highlight the elegance of your
+                                space.
+                            </p>
+                        </div>
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&h=300&fit=crop"
+                                alt="">
+                        </div>
+                        <a href="#" class="read-more">
+                            Explore
+                            <div class="btn-icons"><i class="fas fa-arrow-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
 
@@ -236,27 +418,38 @@
 
                 <!-- Left Column -->
                 <div class="col-lg-5">
-                    <h2>Opportunities for market entry</h2>
-                    <p class="mb-5">With more than 70% of businesses finding success by expanding into new regions, the
-                        available
-                        customer base continues to grow exponentially.</p>
+                    <h2>Why Brands Trust 360shoots
+                    </h2>
+                    <p class="mb-5">High-quality visuals are not just content — they are a powerful tool to drive
+                        attention, engagement, and conversions.
+                        We ensure every shoot delivers clarity, impact, and real business value.
+                    </p>
 
                     <div class="row stats">
                         <div class="col-6 mb-4">
-                            <h3>XX0K</h3>
-                            <p>Users in the potential target segment</p>
+                            <h3>
+                                500+
+                            </h3>
+                            <p>Successful Shoot Projects Delivered
+                            </p>
                         </div>
                         <div class="col-6 mb-4">
-                            <h3>+5%</h3>
-                            <p>Estimated growth rate</p>
+                            <h3>300+
+                            </h3>
+                            <p>Happy & Repeat Clients Across Industries
+                            </p>
                         </div>
                         <div class="col-6">
-                            <h3>+5K</h3>
-                            <p>Additional number of users</p>
+                            <h3>25,000+
+                            </h3>
+                            <p>High-Quality Visual Assets Captured
+                            </p>
                         </div>
                         <div class="col-6">
-                            <h3>€10M</h3>
-                            <p>Gain potential per quarter</p>
+                            <h3>100%
+                            </h3>
+                            <p>Dedicated In-House Production Team
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -266,25 +459,45 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="info-card">
-                                <h5>Target segment</h5>
-                                <p>High % of annual spending on the national level and within the focused segment size
-                                    from 50,000.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="img/asset-12.png" alt="Team">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="info-card bg-main">
-                                <h5>Operational workflow</h5>
-                                <p>Having an uncompromised team. Build processes with precision to scale business across
-                                    multiple regions.</p>
+                                <h5>Our Approach</h5>
+                                <p class="m-0"> <strong>Seamless Production Workflow</strong>
+                                </p>
+                                <p>From planning to execution, our team follows a structured, professional workflow
+                                    ensuring smooth operations, timely delivery, and consistently premium output.
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-card">
-                                <h5>Business scaling</h5>
-                                <p>Scale across new country economies with populations starting from 50,000.</p>
+                                <h5>Scalable & Future-Ready
+                                </h5>
+                                <p class="m-0"> <strong>Your Visual Assets, Built to Scale
+                                    </strong>
+                                </p>
+                                <p>Every shoot is crafted to suit future marketing needs — websites, ads, brochures,
+                                    social media, presentations, and virtual experiences.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card bg-main">
+                                <h5>Customised for Every Need</h5>
+                                <p><strong>Industry-Specific Shoot Solutions
+                                    </strong></p>
+                                <p>Every shoot is crafted to suit future marketing needs — websites, ads, brochures,
+                                    social media, presentations, and virtual experiences.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5>Technology that Elevates
+                                </h5>
+                                <p><strong>Advanced Tech & High-End Equipment
+                                    </strong></p>
+                                <p>From 360° cameras to drones, stabilisers and lighting setups — we use
+                                    industry-leading gear to deliver unmatched clarity and immersive experiences.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -350,73 +563,119 @@
 
     <section class="portfolio-section bg-light section">
         <div class="container">
-            <div>
-                <div class="mb-5">
+            <div class="row">
+                <div class="mb-5 col-lg-8">
                     <h2 class="card-title main-heading">Industries We Serve</h2>
-                    <p class="text-muted">Every group is unique. We customize our programs to address your specific
-                        challenges and
-                        objectives.
+                    <p class="text-muted">We partner with businesses across multiple sectors, capturing their spaces,
+                        operations, and experiences with precision.
+                        Our shoot solutions are tailored to the unique visual needs of every industry.
 
+
+                    </p>
+                    <p class="text-muted">Our shoot solutions are tailored to the unique visual needs of every industry.
                     </p>
                 </div>
 
             </div>
-            <div class="row g-4 align-items-center">
+            <div class="swiper myPortfolioSwiper">
+                <div class="swiper-wrapper">
 
-                <div class="col-md-3 col-sm-6">
-                    <div class="portfolio-card">
-                        <img src="img/asset-12.png" alt="Industrial & Factory Units" class="card-image">
-                        <h5 class="card-title">Industrial & Factory Units</h5>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="portfolio-card medium-card">
-                        <img src="img/asset-10.png" alt="Corporate Offices & Campuses" class="card-image">
-                        <h5 class="card-title">Corporate Offices & Campuses</h5>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="portfolio-card">
-                        <img src="img/asset-12.png" alt="Real Estate & Interiors" class="card-image">
-                        <h5 class="card-title">Real Estate & Interiors</h5>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="portfolio-card">
-                        <img src="img/asset-10.png" alt="Hotels & Resorts" class="card-image">
-                        <h5 class="card-title">Hotels & Resorts</h5>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="portfolio-card">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
-                            alt="Schools, Colleges & Institutes" class="card-image">
-                        <h5 class="card-title">Schools, Colleges & Institutes</h5>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="portfolio-card">
-                        <img src="img/asset-12.png" alt="Automotive & Showrooms" class="card-image">
-                        <div>
-                            <h5 class="card-title">Automotive & Showrooms</h5>
+                    <!-- Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="img/asset-12.png" alt="Industrial & Factory Units" class="card-image">
+                            <h5 class="card-title">Industrial & Factory Units</h5>
+                            <p class="card-desc">
+                                End-to-end 360° plant tours, machinery shoots, workflow videos & on-site photography.
+                            </p>
                         </div>
-
                     </div>
+
+                    <!-- Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card medium-card">
+                            <img src="img/asset-10.png" alt="Corporate Offices & Campuses" class="card-image">
+                            <h5 class="card-title">Corporate Offices & Campuses</h5>
+                            <p class="card-desc">
+                                Modern workspace shoots, corporate films, process videos & immersive office tours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="img/asset-12.png" alt="Real Estate & Interiors" class="card-image">
+                            <h5 class="card-title">Real Estate & Interiors</h5>
+                            <p class="card-desc">
+                                Premium interior photography, walkthrough videos & 360° property presentations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="img/asset-10.png" alt="Hotels & Resorts" class="card-image">
+                            <h5 class="card-title">Hotels & Resorts</h5>
+                            <p class="card-desc">
+                                Cinematic resort showcases, room tours, amenities coverage & aerial drone visuals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+                                alt="Schools, Colleges & Institutes" class="card-image">
+                            <h5 class="card-title">Schools, Colleges & Institutes</h5>
+                            <p class="card-desc">
+                                Campus tours, infrastructure coverage, academic facility shoots & event videography.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="img/asset-12.png" alt="Automotive & Showrooms" class="card-image">
+                            <h5 class="card-title">Automotive & Showrooms</h5>
+                            <p class="card-desc">
+                                Vehicle showcases, product highlights, showroom interiors & drone exterior shots.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="img/asset-10.png" alt="Retail & Malls" class="card-image">
+                            <h5 class="card-title">Retail & Malls</h5>
+                            <p class="card-desc">
+                                Store walkthroughs, brand outlets, commercial space visuals & promotional videos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 (optional) -->
+                    <div class="swiper-slide">
+                        <div class="portfolio-card">
+                            <img src="img/asset-12.png" alt="Gyms & Health Clubs" class="card-image">
+                            <h5 class="card-title">Gyms & Health Clubs</h5>
+                            <p class="card-desc">
+                                360° gym tours, trainer showcase videos, facility highlights & dynamic action shoots.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="col-md-3 col-sm-6 ">
-                    <div class="portfolio-card">
-                        <img src="img/asset-10.png" alt="Retail & Malls" class="card-image">
-                        <h5 class="card-title">Retail & Malls</h5>
-                    </div>
-                </div>
-
+                <!-- Navigation buttons (optional) -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
+
         </div>
     </section>
     <div class="footer-section">
@@ -521,6 +780,35 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".myPortfolioSwiper", {
+            loop: true,
+            speed: 1200,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 4,
+            spaceBetween: 25,
+
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                576: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+                1200: { slidesPerView: 4 },
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+    </script>
+
 </body>
 
 </html>
