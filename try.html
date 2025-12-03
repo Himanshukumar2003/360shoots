@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Virtual Shoots - Transform Spaces into Immersive Digital Experiences</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a4d3e;
+            --secondary-color: #ff6b35;
+            --accent-color: #f0f4f8;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0f3a2f 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .btn-cta {
+            background-color: var(--secondary-color);
+            color: white !important;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+            margin-right: 2rem;
+        }
+
+        .contact-info i {
+            font-size: 1.3rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0f3a2f 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: slideInDown 0.8s ease;
+        }
+
+        .breadcrumb-custom {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .intro-title {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .intro-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 0;
+            background: var(--accent-color);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+        }
+
+        .service-card-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--accent-color);
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            background: linear-gradient(135deg, var(--primary-color), #0f3a2f);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-card:hover .feature-icon {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--accent-color) 0%, white 100%);
+        }
+
+        .benefit-item {
+            margin-bottom: 2.5rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--primary-color), #0f3a2f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-item::after {
+            content: '✓';
+            position: absolute;
+            left: 8px;
+            top: 0px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .benefit-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Suitable For Section */
+        .suitable-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .suitable-list {
+            list-style: none;
+        }
+
+        .suitable-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .suitable-list li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        .suitable-list li:hover {
+            padding-left: 2.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 80px 0;
+            background: var(--accent-color);
+        }
+
+        .highlight-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .faq-card {
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-header {
+            padding: 1.5rem;
+            background: var(--accent-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-header:hover {
+            background: linear-gradient(135deg, var(--primary-color), #0f3a2f);
+            color: white;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-header.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            padding: 1.5rem;
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-content.active {
+            max-height: 300px;
+        }
+
+        .faq-cta-box {
+            background: #fffaf0;
+            border-left: 4px solid var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .faq-cta-box h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Sections */
+        .cta-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0f3a2f 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-section h5 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-link {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--secondary-color);
+            margin-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: #f0f4f8;
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .navbar-collapse {
+                background: var(--primary-color);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
+            }
+
+            .contact-info {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 50px 0;
+                min-height: auto;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .faq-cta-box {
+                padding: 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#"><i class="fas fa-video"></i> 360shoots</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="contact-info d-none d-lg-flex">
+                <i class="fas fa-phone"></i>
+                <span>+1 800 65 78 963</span>
+            </div>
+            <button class="btn btn-cta ms-2">Book a Session</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container-lg">
+            <div class="hero-content">
+                <div class="breadcrumb-custom">
+                    <i class="fas fa-home"></i> Home / 360 Virtual Shoots
+                </div>
+                <h1>360° VIRTUAL SHOOTS</h1>
+                <p style="font-size: 1.1rem; opacity: 0.95; max-width: 600px;">
+                    Transform Your Space Into an Immersive Digital Experience
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section" id="about">
+        <div class="container-lg">
+            <div class="row align-items-center gap-5 gap-lg-0">
+                <div class="col-lg-6">
+                    <p class="intro-title">360° VIRTUAL SHOOTS</p>
+                    <h2 class="section-title">Transform Your Space Into an Immersive Digital Experience</h2>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Step into the future of virtual tours with our cutting-edge 360° photography technology. Without
+                        physical limits, we offer a realistic, interactive environment where clients explore and engage
+                        with your space from anywhere in the world—all at the click of a button.
+                    </p>
+                    <p style="color: var(--text-light); line-height: 1.8;">
+                        In today's digital-first world, businesses must showcase their spaces in immersive digital
+                        spaces that deliver better experiences, and present detailed information with complete
+                        transparency.
+                    </p>
+                    <button class="btn btn-cta mt-3"><i class="fas fa-calendar"></i> Book a Free Consultation</button>
+                </div>
+                <div class="col-lg-6">
+                    <div class="intro-image">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Modern Office Interior">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Deliver -->
+    <section class="services-section" id="services">
+        <div class="container-lg">
+            <h2 class="section-title text-center mb-5">What We Deliver</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="img/asset-1.png" alt="Full 360° Panoramic Virtual Tour">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Full 360° Panoramic Virtual Tour</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="img/asset-13.png" alt="High Resolution HDR Mapping">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">High Resolution HDR Mapping</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Floor Plan Navigation">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Floor Plan Navigation & Menus</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Custom Hotspot Tagging">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Custom Hotspot Tagging</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Branding & White Label">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Branding with your logo and colors</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="360 VR Experience">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Dolby - 360 virtual reality immersive</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Real Estate Showcase">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">VR real-state interactive experience</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Secure Hosting">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Secure hosting and sharing links</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Custom Design">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Custom UI design for enterprise</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Virtual Tours Include -->
+    <section class="features-section">
+        <div class="container-lg">
+            <h2 class="section-title text-center mb-5">Our Virtual Tours Include</h2>
+            <p class="text-center text-muted mb-5" style="font-size: 1.05rem;">
+                Every virtual tour is customized to address your specific challenges and objectives.
+            </p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                        <h3 class="feature-title">Transparency Builds Trust</h3>
+                        <p>Showcase your authentic spaces and build credibility with clients through real, unfiltered
+                            views.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                        <h3 class="feature-title">Saves Time for Visitors</h3>
+                        <p>Your audience can explore your facility, factory, or property from anywhere in the world
+                            instantly.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="feature-title">Enhances Decision-Making</h3>
+                        <p>A detailed 360° view helps clients evaluate without requiring multiple in-person visits.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="feature-title">Ideal for Marketing & Presentations</h3>
+                        <p>Use immersive tours in websites, sales meetings, emails, recruitment, training, and
+                            presentations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                        <h3 class="feature-title">Global Accessibility</h3>
+                        <p>Make your business visible to anyone, anywhere, instantly. Reach clients worldwide without
+                            boundaries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why 360 Virtual Tours Are Essential -->
+    <section class="benefits-section">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Why 360° Virtual Tours Are Essential Today</h2>
+                    <div class="benefit-item">
+                        <h3 class="benefit-title">Transparency Builds Trust</h3>
+                        <p class="text-muted">Clients prefer brands that show real, unfiltered spaces.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3 class="benefit-title">Saves Time for Visitors</h3>
+                        <p class="text-muted">Your audience can tour your facility, factory, or property from anywhere
+                            in the world.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3 class="benefit-title">Enhances Decision-Making</h3>
+                        <p class="text-muted">A detailed 360° view helps clients evaluate without multiple visits.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3 class="benefit-title">Ideal for Marketing & Presentations</h3>
+                        <p class="text-muted">Use the tour in websites, sales meetings, emails, recruitment, training,
+                            and investor decks.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3 class="benefit-title">Global Accessibility</h3>
+                        <p class="text-muted">Your business becomes visible to anyone, anywhere, instantly.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/placeholder.svg?height=500&width=400" alt="360 Virtual Tour Benefits" class="img-fluid"
+                        style="border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suitable For -->
+    <section class="suitable-section">
+        <div class="container-lg">
+            <h2 class="section-title">Suitable For</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="suitable-list">
+                        <li>Manufacturing plants</li>
+                        <li>Industrial facilities</li>
+                        <li>Corporate offices</li>
+                        <li>Gyms and fitness centres</li>
+                        <li>Schools, colleges and universities</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="suitable-list">
+                        <li>Hotels and resorts</li>
+                        <li>Real estate and interior spaces</li>
+                        <li>Retail outlets and malls</li>
+                        <li>Warehouses and logistics hubs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose 360shoots -->
+    <section class="why-choose-section">
+        <div class="container-lg">
+            <h2 class="section-title">Why Choose 360shoots</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="suitable-list">
+                        <li>Experience of delivering 500+ successful 360° environments</li>
+                        <li>Advanced 360° cameras and HDR post-production</li>
+                        <li>Customised layouts as per industry requirements</li>
+                        <li>Fast execution, high-quality output</li>
+                        <li>End-to-end production and support</li>
+                        <li>Proven expertise across 25+ sectors</li>
+                    </ul>
+                    <p style="margin-top: 2rem; color: var(--text-dark);">
+                        Get a complete 360° digital representation of your space. Contact our team for a personalised
+                        virtual tour plan.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="highlight-box">
+                        <h3 style="margin-bottom: 2rem; color: var(--primary-color);">Ready to Get Started?</h3>
+                        <div class="highlight-item">
+                            <strong>📊 500+ Successful Projects</strong>
+                            <p>We've transformed spaces across diverse industries into immersive digital experiences.
+                            </p>
+                        </div>
+                        <div class="highlight-item">
+                            <strong>🎥 Cutting-Edge Technology</strong>
+                            <p>Our advanced 360° cameras and HDR post-production deliver stunning quality.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <strong>⚡ Fast & Reliable</strong>
+                            <p>Quick turnaround times without compromising on quality. Full end-to-end support.</p>
+                        </div>
+                        <button class="btn btn-cta w-100 mt-3">Book a Free Consultation Call</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h2 class="section-title mb-5">Frequently Asked Questions</h2>
+                    <p class="text-muted mb-5">
+                        Discover quick answers to common questions in our comprehensive FAQ section.
+                    </p>
+
+                    <div class="faq-card">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span>How long does a 360° virtual shoot take?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            Most shoots are completed within 1-3 days depending on the size and complexity of the space.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span>Is a 360° tour compatible with mobile and tablets?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            Yes, our 360° tours are fully optimized for all devices including smartphones, tablets, and
+                            desktop browsers.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span>Can I add branding to the virtual tour?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            We offer custom branding options including your logo, colors, and company information
+                            throughout the tour.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span>Can the tour be embedded on my website?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            Yes, we provide embed codes and integration options for seamless website integration.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span>Do you provide hosting for the 360° tour?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            Yes, we provide secure hosting and shareable links for your 360° tours with analytics.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            <span>Can I update or modify the tour in the future?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            Yes! Tours can be updated and modified as needed. Contact us for revision options.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="faq-cta-box">
+                        <i class="fas fa-comments"
+                            style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem; display: block;"></i>
+                        <h3 style="color: var(--text-dark);">Can't Find Your Answer?</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">
+                            Discover quick answers to common questions. Please reach out if you need more support.
+                        </p>
+                        <button class="btn btn-cta"><i class="fas fa-envelope"></i> Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container-lg">
+            <h2><i class="fas fa-question-circle"></i> Have any questions?</h2>
+            <p>Call us • <span style="color: var(--secondary-color); font-weight: 700;">+1 800 65 78 963</span></p>
+            <button class="btn btn-outline-light" style="border-width: 2px; padding: 0.8rem 2rem; margin-top: 1.5rem;">
+                <i class="fas fa-arrow-right"></i> Contact us
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-lg">
+            <div class="row mb-4">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5>360shoots</h5>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">
+                        Transform your space into an immersive digital experience.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Services</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5>SERVICES</h5>
+                    <a href="#" class="footer-link">360° Virtual Tours</a>
+                    <a href="#" class="footer-link">Real Estate Photography</a>
+                    <a href="#" class="footer-link">Drone Shoot Services</a>
+                    <a href="#" class="footer-link">VR Photography</a>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5>CONTACT</h5>
+                    <a href="tel:+1800657963" class="footer-link"><i class="fas fa-phone"></i> +1 800 65 78 963</a>
+                    <a href="mailto:hello@360shoots.com" class="footer-link"><i class="fas fa-envelope"></i>
+                        hello@360shoots.com</a>
+                    <a href="#" class="footer-link"><i class="fas fa-map-marker"></i> Visit us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 360shoots. All rights reserved. | <a href="#"
+                        style="color: var(--secondary-color); text-decoration: none;">Terms of Use</a> | <a href="#"
+                        style="color: var(--secondary-color); text-decoration: none;">Privacy</a> | <a href="#"
+                        style="color: var(--secondary-color); text-decoration: none;">Disclaimer/Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const header = element;
+            const content = element.nextElementSibling;
+            const icon = header.querySelector('.faq-icon');
+
+            // Close other FAQs
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.service-card, .feature-card, .benefit-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Mobile menu close on link click
+        document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarToggle = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggle.click();
+                }
+            });
+        });
+
+        console.log('[v0] Page loaded successfully with animations and interactivity');
+    </script>
+</body>
+
+</html>
