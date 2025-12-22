@@ -5,10 +5,10 @@
   --font-family: "Manrope", sans-serif;
 
   /* ===== COLORS ===== */
-  --primary-color: #ff5e3a;
+  --primary-color: #F04F23;
   --primary-light: #ff815a;
   --secondary-color: #111111;
-  --accent-color: #ef644c;
+  --accent-color: #F58020;
   --text-primary: #1e1e1e;
   --text-secondary: #5a5a5a;
   --text-light: #a3a3a3;
@@ -537,7 +537,7 @@ h2 {
 
 .whychooseus .info-card h5 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 21px;
   margin-bottom: 30px;
 }
 
@@ -1910,4 +1910,9 @@ img {
 /* Navbar link fix */
 .navbar .nav-link {
   color: var(--bg-light) !important;
+}
+
+
+.logo{
+  width: 200px;
 }
