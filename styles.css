@@ -595,7 +595,7 @@ h2 {
   font-weight: 900;
 }
 .therapy-card p {
-  font-weight: 500;
+ 
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
