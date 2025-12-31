@@ -479,7 +479,12 @@ h2 {
 
 .interior-image {
   position: relative;
+ 
+  object-fit: cover;
 }
+
+.interior-image img {max-height: 400px;
+object-fit: cover;}
 
 .quote-box {
   position: absolute;
@@ -1163,6 +1168,20 @@ img {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .nav-items {
+    flex-wrap: wrap;
+  }
+.mega-menu{
+position: static !important;
+width: 100% !important;
+}
+.mega-icon {
+  display: none !important;
+}
+.mega-desc{
+  display: none;
+}
 
   .cta-box {
     position: relative;
@@ -1915,4 +1934,8 @@ img {
 
 .logo{
   width: 200px;
+}
+
+.deliver{
+  display: none;
 }
