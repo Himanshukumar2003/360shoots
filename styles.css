@@ -632,6 +632,7 @@ object-fit: cover;}
   position: absolute;
   bottom: 15px;
   left: 15px;
+  display: none;
 }
 
 .read-more {
