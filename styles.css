@@ -45,7 +45,9 @@ body {
   background-color: var(--bg-light);
   line-height: var(--body-line-height);
 }
-
+.section{
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -146,6 +148,11 @@ h2 {
     min-width: 260px;
     font-size: 18px !important; */
   font-weight: 600;
+}
+
+.dropdown-menu {
+  background-color: var(--accent-color);
+
 }
 
 /* ===== HERO SECTION ===== */
@@ -286,10 +293,7 @@ h2 {
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
   transition: var(--transition);
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
@@ -317,10 +321,7 @@ h2 {
   display: flex;
   align-items: flex-end;
   color: var(--bg-light);
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
@@ -1169,6 +1170,10 @@ img {
     gap: 40px;
   }
 
+  .dropdown-item{
+color: white;
+  }
+
   .nav-items {
     flex-wrap: wrap;
   }
@@ -1936,6 +1941,3 @@ width: 100% !important;
   width: 200px;
 }
 
-.deliver{
-  display: none;
-}
